@@ -17,7 +17,7 @@ const HomePage = () => {
   const [pizzasValue, setPizzaValue] = useState([]);
 
   const fetchData = async () => {
-    await axios.get('http://localhost:8000/getPizzas').then(res=>setPizzaValue(res.data)).then().catch(err=>err)
+    await axios.get('https://foodie-pizza-backend-application.onrender.com/getPizzas').then(res=>setPizzaValue(res.data)).then().catch(err=>err)
   };
   useEffect(() => {
     //dispatch(getAllPizzas());

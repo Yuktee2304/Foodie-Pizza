@@ -7,7 +7,7 @@ export const orderActions = (token, subtotal) => async (dispatch, getState) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/orders/placeorder", // Replace with the actual URL
+      "https://foodie-pizza-backend-application.onrender.com/api/orders/placeorder", // Replace with the actual URL
       {
         token,
         subtotal,
