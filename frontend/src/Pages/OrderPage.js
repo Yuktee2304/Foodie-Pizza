@@ -25,7 +25,7 @@ export const OrderPage = () => {
           orders.map((order) => (
             <div className="col-md-8 mb-4" key={order._id} style={{backgroundColor:"lightskyblue"}}>
               <div className="flex-container">
-                <div className="text-start w-50">
+                <div className="text-start w-100 m-1">
                   <h2 className="fw-bold" style={{ fontSize: '25px' }}>
                     Items
                   </h2>
@@ -38,7 +38,7 @@ export const OrderPage = () => {
                     </div>
                   ))}
                 </div>
-                <div className="text-start w-25">
+                <div className="text-start w-100">
                   <h2 className="fw-bold" style={{ fontSize: '25px' }}>
                     Address
                   </h2>
@@ -47,7 +47,7 @@ export const OrderPage = () => {
                   <p>Country: {order.shippingAddress.country}</p>
                   <p>Pincode: {order.shippingAddress.pincode}</p>
                 </div>
-                <div className="text-start w-25">
+                <div className="text-start w-100">
                   <h2 className="fw-bold" style={{ fontSize: '25px' }}>
                     Order Information
                   </h2>
