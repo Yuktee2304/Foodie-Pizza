@@ -10,11 +10,7 @@ const cors = require('cors');
 
 app.use(express.json());
 
-const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the actual frontend URL
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Server is working" + port);
