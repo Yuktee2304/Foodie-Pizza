@@ -39,7 +39,7 @@ const LoginPage = () => {
           </h2><span><i className="fa-solid fa-share-from-square"></i></span>
 
           {loading && (<Loading/>)}
-          {success && (<Success success='User registered Successfully'/>)}
+          {success && (<Success success='User logged In Successfully'/>)}
           {error && (<Error error='Invalid credentials' />)}
 
           <div>
