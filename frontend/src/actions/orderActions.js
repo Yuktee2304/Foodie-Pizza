@@ -34,7 +34,7 @@ export const getUserOrders = () => async (dispatch) => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   dispatch({ type: "GET_USER_ORDERS_REQUEST" });
   try {
-    const response = await axios.post("/api/orders/getuserorders", {
+    const response = await axios.post("https://foodie-pizza-backend-application.onrender.com/api/orders/getuserorders", {
       userId: currentUser._id,
     });
     dispatch({ type: "GET_USER_ORDERS_SUCCESS", payload: response.data })

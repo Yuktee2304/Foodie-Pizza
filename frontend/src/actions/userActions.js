@@ -5,7 +5,7 @@ export const registerUser = (user) => async (dispatch) => {
   dispatch({ type: "USER_REGISTER_REQUEST" });
 
   try {
-    const response = await axios.post("/api/users/register", user);
+    const response = await axios.post("https://foodie-pizza-backend-application.onrender.com/api/users/register", user);
     dispatch({ type: "USER_REGISTER_SUCCESS", payload: response.data });
     localStorage.setItem("user", JSON.stringify(response.data));
     window.location.href = "/login";
@@ -19,7 +19,7 @@ export const loginUser = (user) => async (dispatch) => {
   dispatch({ type: "USER_LOGIN_REQUEST" });
 
   try {
-    const request = await axios.post("/api/users/login", user);
+    const request = await axios.post("https://foodie-pizza-backend-application.onrender.com/api/users/login", user);
     const response = await request.data;
     dispatch({ type: "USER_LOGIN_SUCCESS", payload: response });
     localStorage.setItem("currentUser", JSON.stringify(response));
